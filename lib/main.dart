@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           create: (_) => HomeFilterBloc()..add(FilterChanged(StaticText.mostViewed)),
         ),
         BlocProvider(
-          create: (_) => DestinationBloc(),
+          create: (_) => DestinationBloc()..add(ChangedTitle(StaticText.overview)),
         ),
         BlocProvider(
           lazy: false,

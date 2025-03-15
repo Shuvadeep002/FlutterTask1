@@ -12,13 +12,18 @@ class DestinationBloc extends Bloc<DestinationEvent, DestinationState> {
     on<DesignationChanged>((event, emit) {
       emit(DestinationLoaded(
         destinations: event.destinations,
+        selectedTitle: StaticText.overview, // Default tab
       ));
     });
 
     on<ChangedTitle>((event, emit) {
-      emit(TitleLoaded(
-        selectedTitle: event.selectedTitle,
-      ));
+      if (state is DestinationLoaded) {
+        final currentState = state as DestinationLoaded;
+        emit(DestinationLoaded(
+          destinations: currentState.destinations,
+          selectedTitle: event.selectedTitle,
+        ));
+      }
     });
   }
 }

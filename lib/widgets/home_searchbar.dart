@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../bloc/search/search_bloc.dart';
 import '../utils/screen_size.dart';
@@ -59,10 +60,10 @@ class HomeSearchbar extends StatelessWidget {
               ),
 
               // Settings Icon
-              Icon(
-                Icons.tune,
-                color: Colors.grey,
-                size: width * 0.06,
+              SizedBox(
+                height: width * 0.05,
+                width: width * 0.05,
+                child:  SvgPicture.asset('assets/icons/filter_icon.svg',)
               ),
             ],
           ),

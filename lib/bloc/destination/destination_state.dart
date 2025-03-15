@@ -7,10 +7,10 @@ class DestinationInitial extends DestinationState {}
 
 class DestinationLoaded extends DestinationState {
   final Destination destinations;
-  DestinationLoaded({required this.destinations});
-}
-
-class TitleLoaded extends DestinationState {
   final String selectedTitle;
-  TitleLoaded({required this.selectedTitle});
+
+  DestinationLoaded({
+    required this.destinations,
+    required this.selectedTitle,
+  });
 }

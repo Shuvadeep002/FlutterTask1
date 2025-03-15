@@ -14,6 +14,8 @@ class StaticText{
   static const String mostViewed = 'Most Viewed';
   static const String details = 'Details';
   static const String overview = 'Overview';
+  static const String bookNow = 'Book Now';
+  static const String favourite = 'Favourite';
 }
 
 class StaticColors{
